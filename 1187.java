@@ -1,1 +1,0 @@
-/home/doodox/Desktop/LeetCode/Leet_Code_Java/src/S1187.java
