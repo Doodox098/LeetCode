@@ -8,14 +8,26 @@ import java.util.Collections;
 import java.util.List;
 
 public class S1187 {
+    private static int cmp_arrays(int[] arr1, int[] arr2) {
+        return 0;
+    }
 
     public static int makeArrayIncreasing(int[] arr1, int[] arr2) {
         int ans = 0;
+        int[] arr1_s = Arrays.stream(arr1).toArray();
         arr2 = Arrays.stream(arr2).sorted().toArray();
-        int j = 0;
-        for (int i = 1; i < arr1.length; i++) {
-
+        for(int i = 0; i < arr1.length - 1; ++i) {
+            if(arr1[i] >= arr1[i + 1]) {
+                for(int j = 0; j < arr2.length; ++j) {
+                    for(int k = i - j; k <= i + 1; ++k) {
+                        for(int l = 0; j < arr2.length - j;++l) {
+                            
+                        }
+                    }
+                }
+            }
         }
+
         return ans;
     }
 
@@ -50,3 +62,16 @@ public class S1187 {
         }
     }
 }
+//for(int i = 0; i < arr2.length; ++i) {
+//        for(int j = 0; j < arr2.length - i; ++j) {
+//        int start = arr2[j];
+//        int end = arr2[j + i];
+//        for(int k = -1; k < arr1.length - 2 - i; ++k) {
+//        if((((k == -1 || start > arr1[k]) && end <= arr1[k + 1]) && (end <= arr1[k + 2 + i]) && (arr1[k + i + 1]  >= arr1[k + 2 + i]))){
+//        for(int l = 0; l <= i; ++l) {
+//        arr1[k + 1 + l] = arr2[j + l];
+//        }
+//        }
+//        }
+//        }
+//        }
